@@ -1,11 +1,11 @@
-package EasyTable;
+package HTML::EasyTable;
 use strict; 
 use Carp;
 use warnings;
 BEGIN {
         use Exporter   ();
         our ($VERSION, @ISA);
-        $VERSION     = '0.03';
+        $VERSION     = '0.04';
         @ISA         = qw(Exporter);
 }
 
@@ -158,11 +158,11 @@ __END__
 
 =head1 NAME
 
-EasyTable - a Module for easy printing of HTML Tables
+HTML::EasyTable - a Module for easy printing of HTML Tables
 
 =head1 SYNOPSIS
 
- use EasyTable;
+ use HTML::EasyTable;
  my %options = (
     -mass_param=>{
             -style_3=>'font-weight:600;', # apply to column 3
@@ -175,7 +175,7 @@ EasyTable - a Module for easy printing of HTML Tables
     -cellspacing=>'0'         #
  );
  # Construct $table object with %options arguments:
- my $table = EasyTable->new(\%options);
+ my $table = HTML::EasyTable->new(\%options);
 
  # print <table style="width:800;" id="table1" .... without mass_param :
  print $table->startTable;
@@ -204,7 +204,7 @@ This module print HTML tables very easy and simple.
 =item *
 B<new(-mass_param=E<gt>{\%mass_opts},\%opts);>
 
- Create object EasyTable with various options :
+ Create object HTML::EasyTable with various options :
 
 I<%opts>  arguments whos may be any standard <table>      
  arguments in CGI.pm like style:
@@ -293,10 +293,10 @@ None by default.
 These examples should be seen in directory "examples"
 after "make test" create her
  # Very simple exaple with mixed type cells
- # See: B<examples/HTML-EasyTable-Sample1.htm>
- use EasyTable;
+ # See: B<examples/HTML-HTML::EasyTable-Sample1.htm>
+ use HTML::EasyTable;
  use CGI qw(:standard);
- my $table = EasyTable->new(
+ my $table = HTML::EasyTable->new(
                 -style=>'border: 2px black double;',
                 -border=>1,
                 -cellpadding=>2,
@@ -317,10 +317,10 @@ after "make test" create her
 
 
 # Here is a simple Random Calculator:
- # See: B<examples/HTML-EasyTable-Sample2.htm>
- use EasyTable;
+ # See: B<examples/HTML-HTML::EasyTable-Sample2.htm>
+ use HTML::EasyTable;
  use CGI qw(:standard);
- my $table = EasyTable->new(
+ my $table = HTML::EasyTable->new(
                 -mass_param=>{-width_6=>75,
                               -bgcolor_6=>'#6666FF',
                               -style_6=>'font-weight:600;'},
@@ -347,11 +347,11 @@ after "make test" create her
 
 Z<>=======================================================================
  # Example 2
- # See: B<examples/HTML-EasyTable-Sample2.htm>
- use EasyTable;
+ # See: B<examples/HTML-HTML::EasyTable-Sample2.htm>
+ use HTML::EasyTable;
  use CGI qw(:standard);
 
- my $table = EasyTable->new(
+ my $table = HTML::EasyTable->new(
                 -mass_param=>{-width_1=>25},
                 -width=>'100%'
                );
@@ -390,11 +390,11 @@ print header,start_html;
 
 E<nbsp>=======================================================================
  # Print table 36 x 6 cells with colors in HEX format
- # See: B<examples/HTML-EasyTable-Sample3.htm>
+ # See: B<examples/HTML-HTML::EasyTable-Sample3.htm>
 Z<>
-    use EasyTable;
+    use HTML::EasyTable;
     use CGI qw(:standard);
-    my $table = EasyTable->new(
+    my $table = HTML::EasyTable->new(
                   -border=>'1',
                   -width=>'100%',
                   -cellcpasing=>'0'
@@ -432,7 +432,7 @@ B<CGI>
 =head1 BUGS
 
 B<When set:>
- EasyTable->new(-mass_param=>{-title_3=>'This is cell 3'});
+ HTML::EasyTable->new(-mass_param=>{-title_3=>'This is cell 3'});
 
 B<then set:>
  print $table->tr_TD({-title_3=>'Another title'},

@@ -1,4 +1,7 @@
 Revision history for Perl extension HTML::EasyTable.
+0.04  Thu Sep 2004
+      - Append documentation
+      - Some bugs fixed
 
 0.03  Wed Sep 2004
       - Simplify <tr> options more
