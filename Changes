@@ -1,0 +1,15 @@
+Revision history for Perl extension HTML::EasyTable.
+
+0.03  Wed Sep 2004
+      - Simplify <tr> options more
+      - Added mixed type cells
+      - Add 1 more example
+
+0.02  Tue Sep 21 19:00:00 2004
+      - Add method tr_TH.
+      - Append documentation
+      - Added few examples
+-
+0.01  Sat Sep 18 20:05:06 2004
+      -  Initial release
+
